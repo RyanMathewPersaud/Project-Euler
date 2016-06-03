@@ -1,2 +1,2 @@
 # Project-Euler
-In this repository I will attempt some of the problems on Project Euler.
+This respo contains partial and complete solutions to Project Euler problems.
