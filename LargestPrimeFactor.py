@@ -81,7 +81,7 @@ class Factor:
         #returning largest prime factor
         return self.largest
 
-a = Factor(24)
+a = Factor(13195)
 a.getAllFactors()
 print(a.getLargestPrimeFactor())
 
