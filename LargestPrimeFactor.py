@@ -30,6 +30,23 @@ class Factor:
             i += 1
         return self.factorList
 
+    #Removes all numbers from factorList that are greater than num
+    def smallerThan(self, num):
+        #counter
+        i = 0
+
+        #checks which numbers in self.factorList ith item is greater than
+        while i < len(self.factorList):
+            #if ith item is greater than num, removes that element and all
+            #elements larger than the ith element
+            if self.factorList[i] > num:
+                self.factorList = self.factorList[:i]
+
+            #increments i
+            i += 1
+     
+        
+
     #function to determine the largest prime factor of the number given
     def getLargestPrimeFactor(self):
 
@@ -52,6 +69,8 @@ class Factor:
             #if currentVal is divisible by i, divide currentVal by i
             if currentVal % i == 0:
                 currentVal = currentVal/i
+                #reduces size of self.factorList
+                self.smallerThan(i)
                 #if i is larger than the self.largest, i is largest prime factor
                 if i > self.largest:
                     self.largest = i
