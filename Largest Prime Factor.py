@@ -1,6 +1,7 @@
 '''
 Title: Largest Prime Factor
 Name: Ryan Persaud
+Name: Arjun Dhiman
 Date: June 3, 2016
 Description: Finds the largest prime factor of a number.
 '''
