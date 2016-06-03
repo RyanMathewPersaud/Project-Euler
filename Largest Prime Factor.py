@@ -1,3 +1,9 @@
+'''
+Title: Largest Prime Factor
+Name: Ryan Persaud
+Date: June 3, 2016
+Description: Finds the largest prime factor of a number.
+'''
 #creating a class called factor
 class Factor:
 
@@ -17,7 +23,7 @@ class Factor:
         i = 1
 
         #Add all factors of self.product to factorList
-        while i <= self.product:
+        while i <= self.product//2:
             if self.product % i == 0:
                 self.factorList.append(i)
             i += 1
@@ -55,7 +61,7 @@ class Factor:
         #returning largest prime factor
         return self.largest
 
-a = Factor(600851475143)
+a = Factor(24)
 a.getAllFactors()
 print(a.getLargestPrimeFactor())
 
