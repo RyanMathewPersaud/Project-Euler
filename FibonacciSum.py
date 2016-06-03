@@ -8,20 +8,17 @@ def evenFibonacciSum(limit):
     temp = 0
     sequenceList = []
 
-    #gets and appends all numbers in fibonacci sequence under the limit
-    #and appends the values in sequenceList
+    #gets all numbers in fibonacci sequence under the limit and appends
+    #all of the even values into sequenceList
     while current <= limit:
         temp = current
-        sequenceList.append(current)
+        if current % 2 == 0:
+            sequenceList.append(current)
         current += previous
         previous = temp
 
-    #calculates the sum of only the even numbers in the fibonacci sequence
-    for i in sequenceList:
-        if i % 2 == 0:
-            total += i
-            
-    #returns the sum of only the even numbers in the fibonacci sequence
+    #calculates and returns the sum of sequenceList
+    total = sum(sequenceList)
     return total
 
 a = evenFibonacciSum(4000000)
