@@ -1,3 +1,4 @@
+#Helper function using recursion, returns the n factorial.
 def factorial(n):
     if(n == 0):
         return 1
@@ -6,6 +7,7 @@ def factorial(n):
     else:
         return n*factorial(n-1)
 
+#calculates the sum of the digits from n factorial.
 def sum_digits(n):
     fact = factorial(n)
     factorial_result = str(fact)
@@ -18,4 +20,5 @@ def sum_digits(n):
     
     return result
 
+#prints the sum of the digits of n factorial
 print(sum_digits(100))
